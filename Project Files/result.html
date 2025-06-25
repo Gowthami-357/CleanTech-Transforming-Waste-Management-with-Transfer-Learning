@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding-top: 100px;
+        }
+
+        .result-container {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 40px;
+            border-radius: 15px;
+            display: inline-block;
+        }
+
+        img {
+            max-width: 300px;
+            margin-top: 20px;
+            border: 3px solid white;
+            border-radius: 10px;
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 10px 25px;
+            font-size: 18px;
+            background-color: green;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h1>Prediction Result</h1>
+        <h2>Predicted Label: {{ label }}</h2>
+        <img src="{{ image_url }}" alt="Uploaded Waste Image">
+        <br><br>
+        <a href="/upload" class="btn">Classify Another</a>
+    </div>
+</body>
+</html>
