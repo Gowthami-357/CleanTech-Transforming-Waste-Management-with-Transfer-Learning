@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Municipal Waste Classifier</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url("/static/waste_bg.jpg") no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 40px;
+            border-radius: 20px;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            font-size: 20px;
+            background-color: green;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Municipal Waste Classification</h1>
+        <p>Classifies waste into Biodegradable, Recyclable, or Trash</p>
+        <a href="/upload"><button class="btn">Get Started</button></a>
+    </div>
+</body>
+</html>

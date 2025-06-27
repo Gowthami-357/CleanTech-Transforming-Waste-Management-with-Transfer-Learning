@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prediction Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      padding: 2rem;
+      text-align: center;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 90%;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+    .result {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+    .label {
+      font-size: 1rem;
+      color: #555;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 20px;
+    }
+    .button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Prediction Details</h2>
+
+    <!-- Image preview -->
+    <div class="label">Uploaded Image:</div>
+    <img src="{{ image_url }}" alt="Uploaded Waste Image" />
+
+    <!-- Show predicted class -->
+    <div class="result">The predicted class is: {{ predicted_class }}</div>
+
+    <!-- Optional: confidence score (if passed from Flask) -->
+    {% if confidence %}
+      <div class="label">Confidence: {{ confidence }}%</div>
+    {% endif %}
+
+    <!-- Link to go back -->
+    <a href="/" class="button">Try another image</a>
+  </div>
+</body>
+</html>
